@@ -1,0 +1,7 @@
+server:
+  context-path: /yzywai
+  port: 8888
+yzy:
+  age: 20
+  name: yzy
+  jbcd: 6mm
