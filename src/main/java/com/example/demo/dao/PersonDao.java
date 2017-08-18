@@ -1,6 +1,7 @@
 package com.example.demo.dao;
 
 import com.example.demo.entity.Person;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -20,4 +21,6 @@ public interface PersonDao {
     })
     List<Person> findAll();
 
+    @Insert("insert into person(openid) values(#{openid})")
+    void insert(Person person);
 }

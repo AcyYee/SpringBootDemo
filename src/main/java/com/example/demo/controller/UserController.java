@@ -29,4 +29,9 @@ public class UserController {
         return personService.findAllPerson();
     }
 
+    @RequestMapping("test")
+    public int test(){
+        return personService.createPerson();
+    }
+
 }

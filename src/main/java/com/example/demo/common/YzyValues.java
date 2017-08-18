@@ -42,7 +42,7 @@ public class YzyValues {
         return "YzyValues{" +
                 "年龄=" + age +
                 ", 姓名='" + name + '\'' +
-                ", jb长度='" + jbcd + '\'' +
+                ", 身高='" + jbcd + '\'' +
                 '}';
     }
 }
