@@ -16,12 +16,8 @@ import javax.sql.DataSource;
 @ServletComponentScan
 public class DemoApplication {
 
-	@Bean
-	public PlatformTransactionManager txManager(DataSource dataSource) {
-		return new DataSourceTransactionManager(dataSource);
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
+
 }
