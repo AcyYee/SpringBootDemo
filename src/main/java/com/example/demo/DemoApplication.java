@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -19,7 +20,7 @@ import javax.sql.DataSource;
 public class DemoApplication {
 
 	@Bean(name = "transactionManager")
-	public PlatformTransactionManager annotationDrivenTransactionManager(DataSource dataSource) {
+	public PlatformTransactionManager annotationDrivenTransactionManager(@Qualifier("dataSource")DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);
 	}
 

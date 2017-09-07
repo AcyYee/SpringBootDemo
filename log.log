@@ -1819,3 +1819,33 @@ java.lang.NullPointerException: null
 2017-09-07 09:41:47.919  INFO 10264 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
 2017-09-07 09:41:47.978  INFO 10264 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8888 (http)
 2017-09-07 09:41:47.988  INFO 10264 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 2.827 seconds (JVM running for 3.314)
+2017-09-07 09:43:57.382  INFO 18664 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on DESKTOP-0564FJJ with PID 18664 (E:\IdeProject\demo\target\classes started by acy in E:\IdeProject\demo)
+2017-09-07 09:43:57.384  INFO 18664 --- [main] com.example.demo.DemoApplication         : The following profiles are active: orgin
+2017-09-07 09:43:57.437  INFO 18664 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10e41621: startup date [Thu Sep 07 09:43:57 CST 2017]; root of context hierarchy
+2017-09-07 09:43:58.278  INFO 18664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8888 (http)
+2017-09-07 09:43:58.284  INFO 18664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-09-07 09:43:58.285  INFO 18664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-09-07 09:43:58.332  INFO 18664 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/yzywai]        : Initializing Spring embedded WebApplicationContext
+2017-09-07 09:43:58.332  INFO 18664 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 897 ms
+2017-09-07 09:43:58.430  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-07 09:43:58.431  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.demo.druid.DruidStatViewServlet' to [/druid/*]
+2017-09-07 09:43:58.432  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-07 09:43:58.433  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-07 09:43:58.433  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-07 09:43:58.433  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-07 09:43:58.433  INFO 18664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'druidWebStatFilter' to urls: [/*]
+2017-09-07 09:43:58.842  INFO 18664 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10e41621: startup date [Thu Sep 07 09:43:57 CST 2017]; root of context hierarchy
+2017-09-07 09:43:58.874  INFO 18664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/test]}" onto public int com.example.demo.controller.UserController.test(java.lang.String,java.lang.String)
+2017-09-07 09:43:58.875  INFO 18664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/persons]}" onto public java.util.List<com.example.demo.entity.Person> com.example.demo.controller.UserController.persons()
+2017-09-07 09:43:58.876  INFO 18664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[POST]}" onto public void com.example.demo.controller.UserController.loadState(java.lang.String,javax.servlet.http.HttpSession)
+2017-09-07 09:43:58.877  INFO 18664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-07 09:43:58.878  INFO 18664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-07 09:43:58.891  INFO 18664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-07 09:43:58.892  INFO 18664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-07 09:43:58.910  INFO 18664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-07 09:43:58.921  INFO 18664 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2017-09-07 09:43:59.026  INFO 18664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-07 09:43:59.027  INFO 18664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-09-07 09:43:59.030  INFO 18664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-09-07 09:43:59.059  INFO 18664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8888 (http)
+2017-09-07 09:43:59.061  INFO 18664 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 1.891 seconds (JVM running for 2.257)
