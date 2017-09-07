@@ -5,6 +5,7 @@ import com.example.demo.entity.Person;
 import com.example.demo.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,16 +22,16 @@ public class PersonServiceImpl implements PersonService {
         return personDao.findAll();
     }
 
-    @Override
-    @Transactional(propagation= Propagation.REQUIRED)
-    public int createPerson(){
-        Person person1 = new Person();
-        Person person2 = new Person();
-        person1.setOpenid("qweqeqwew");
-        personDao.insert(person1);
-        personDao.insert(person2);
-        return 1;
-    }
 
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED,isolation = Isolation.DEFAULT,timeout=36000,rollbackFor=Exception.class)
+    public int createPerson(String openid){
+
+            Person person = new Person();
+            person.setOpenid(openid);
+            personDao.insert(person);
+            return 1;
+
+    }
 }
 

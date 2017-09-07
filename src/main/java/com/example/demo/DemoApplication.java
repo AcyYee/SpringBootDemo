@@ -14,7 +14,14 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @ServletComponentScan
+@EnableTransactionManagement
+@MapperScan("com.example.demo.dao")
 public class DemoApplication {
+
+	@Bean(name = "transactionManager")
+	public PlatformTransactionManager annotationDrivenTransactionManager(DataSource dataSource) {
+		return new DataSourceTransactionManager(dataSource);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);

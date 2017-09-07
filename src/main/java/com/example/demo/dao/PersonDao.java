@@ -12,12 +12,8 @@ public interface PersonDao {
 
     @Select("select * from person")
     @Results({
-            @Result(id=true,column="openid",property="openid"),
-            @Result(column="user_name",property="userName"),
-            @Result(column="user_icon",property="userIcon"),
-            @Result(column = "date_time",property = "dateTime"),
-            @Result(column = "date_count",property = "dateCount"),
-            @Result(column = "type",property = "type")
+            @Result(id=true,column="person_id",property="personId"),
+            @Result(column="openid",property="openid")
     })
     List<Person> findAll();
 

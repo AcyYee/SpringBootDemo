@@ -16,14 +16,10 @@ import javax.sql.DataSource;
 
 @Configuration
 @AutoConfigureAfter(DruidDataSourceConfiguration.class)
-@EnableTransactionManagement
-public class MyBatisConfig implements TransactionManagementConfigurer {
-
-    @Autowired
-    DataSource dataSource;
+public class MyBatisConfig {
 
     @Bean(name = "sqlSessionFactory")
-    public SqlSessionFactory sqlSessionFactoryBean() {
+    public SqlSessionFactory sqlSessionFactoryBean(DataSource dataSource) {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         try {
@@ -37,12 +33,6 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
     @Bean
     public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
-    }
-
-    @Bean
-    @Override
-    public PlatformTransactionManager annotationDrivenTransactionManager() {
-        return new DataSourceTransactionManager(dataSource);
     }
 
 }

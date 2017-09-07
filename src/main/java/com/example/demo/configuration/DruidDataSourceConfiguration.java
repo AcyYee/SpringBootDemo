@@ -12,7 +12,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 @Configuration
 public class DruidDataSourceConfiguration {
 
-	@Bean
+	@Bean(name = "dataSource")
 	@ConfigurationProperties(prefix = "spring.datasource")
 	public DataSource dataSource() {
 		DruidDataSource druidDataSource = new DruidDataSource();

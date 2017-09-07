@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <title>Title</title>
+    </head>
+    
+    <body>
+
+        <div id="login_container"></div>
+
+        <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var obj = new WxLogin({
+                    id: "login_container",
+                    appid: "wxd4b3d4bd675361f2",
+                    scope: "snsapi_login",
+                    redirect_uri: "https://www.superprism.cn/projectplatform/TPrProUserInfo/wxlogin",
+                    state: "dasdad",
+                    style: "black",
+                    href: ""
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

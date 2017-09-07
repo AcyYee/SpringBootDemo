@@ -9,6 +9,6 @@ public interface PersonService {
 
     List<Person> findAllPerson();
 
-    @Transactional
-    int createPerson();
+    int createPerson(String openid);
+
 }
